@@ -64,7 +64,7 @@ export default function SkillsSection() {
     <section
       ref={sectionRef}
       className="bg-black py-16 flex flex-col items-center"
-      style={{ minHeight: "100vh" }} // Reduced height to 100vh (viewport height)
+      style={{ minHeight: "100vh" }} id="services" // Reduced height to 100vh (viewport height)
     >
       <h3 className="text-white text-sm text-center uppercase mb-10 px-4 max-w-xl">
         Our Skills Cover

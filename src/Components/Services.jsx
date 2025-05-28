@@ -146,7 +146,7 @@ const StackingCards = () => {
   return (
     <div
       className="relative"
-      style={{ height: containerHeight, backgroundColor: "black" }}
+      style={{ height: containerHeight, backgroundColor: "black" }} 
     >
       <div
         ref={sectionRef}

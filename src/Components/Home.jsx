@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { motion, useAnimationControls } from 'framer-motion';
+import Navbar from './navbar';
 
 // Framer Motion: Variants for the container (staggered animation for children)
 const containerVariants = {
@@ -68,7 +69,8 @@ const Homesection = () => {
   const text = "CREATIஅTTI";
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-black text-white px-4 text-center space-y-6">
+    <div className="flex flex-col justify-center items-center h-screen bg-black text-white px-4 text-center space-y-6" id='home'>
+      <Navbar/>
       {/* Framer Motion: Main Text Container with Fade-In Animation */}
       <motion.div
         className="flex flex-wrap justify-center leading-none gap-x-1"

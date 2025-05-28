@@ -23,28 +23,28 @@ const Navbar = () => {
     if (target) {
       window.scrollTo({
         top: target.offsetTop,
-        behavior: "smooth", // Lenis handles the smooth behavior
+        behavior: "smooth",
       });
       setIsOpen(false); // Close mobile menu after clicking
     }
   };
 
-  // Hover animation for nav links (desktop + mobile)
+  // Hover animation for nav links (desktop + mobile) - underline slide in
   useEffect(() => {
     linkRefs.current.forEach((el) => {
       if (el) {
+        const underline = el.querySelector("span");
+
         const onEnter = () => {
-          gsap.to(el, {
-            y: -6,
-            rotation: -5,
+          gsap.to(underline, {
+            width: "100%",
             duration: 0.3,
             ease: "power2.out",
           });
         };
         const onLeave = () => {
-          gsap.to(el, {
-            y: 0,
-            rotation: 0,
+          gsap.to(underline, {
+            width: 0,
             duration: 0.3,
             ease: "power2.inOut",
           });
@@ -133,11 +133,16 @@ const Navbar = () => {
             <li
               key={link.name}
               ref={(el) => (linkRefs.current[i] = el)}
-              className="cursor-pointer font-semibold"
+              className="cursor-pointer font-semibold relative inline-block"
             >
-              <a href={link.href} onClick={(e) => handleNavClick(e, link.href)}>
+              <a
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="relative z-10"
+              >
                 {link.name}
               </a>
+              <span className="absolute left-0 bottom-0 h-[2px] bg-[#97c93c] w-0"></span>
             </li>
           ))}
         </ul>
@@ -169,10 +174,11 @@ const Navbar = () => {
               key={link.name}
               href={link.href}
               ref={(el) => (linkRefs.current[i + navLinks.length] = el)}
-              className="text-6xl tracking-wide font-sixcaps cursor-pointer opacity-0"
+              className="text-6xl tracking-wide font-sixcaps cursor-pointer opacity-0 relative inline-block"
               onClick={(e) => handleNavClick(e, link.href)}
             >
               {link.name}
+              <span className="absolute left-0 bottom-[-6px] h-[3px] bg-[#97c93c] w-0"></span>
             </a>
           ))}
         </div>

@@ -62,7 +62,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white pb-10 relative">
+    <footer className="bg-black text-white pb-10 relative" id='contact'>
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between text-center gap-6 py-6 px-4">
         {/* Email */}
         <div className="flex-1 flex flex-col items-center gap-2">
