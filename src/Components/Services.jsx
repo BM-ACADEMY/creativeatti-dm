@@ -7,10 +7,12 @@ import { motion } from "framer-motion";
 gsap.registerPlugin(ScrollTrigger);
 
 const images = [
-  { src: "/1.jpg", title: "Mountain View" },
-  { src: "/2.jpg", title: "Forest Path" },
-  { src: "/3.jpg", title: "Desert Dunes" },
-  { src: "/4.jpg", title: "Ocean Horizon" },
+  { src: "/1.png", title: "Creative content production" },
+  { src: "/2.png", title: "Commercial Photos & Films" },
+  { src: "/3.png", title: "Social media management" },
+  { src: "/4.png", title: "Digital Media Ads" },
+  { src: "/5.png", title: "Web Design & SEO" },
+  { src: "/6.png", title: "Branding" },
 ];
 
 const StackingCards = () => {
@@ -146,7 +148,7 @@ const StackingCards = () => {
   return (
     <div
       className="relative"
-      style={{ height: containerHeight, backgroundColor: "black" }} 
+      style={{ height: containerHeight }} 
     >
       <div
         ref={sectionRef}

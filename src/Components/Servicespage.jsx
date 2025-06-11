@@ -29,18 +29,18 @@ const ScrollImage = () => {
   }, []);
 
   return (
-    <div className="min-h-[200vh] bg-black">
+    <div className="min-h-[200vh]">
       <div className="h-screen sticky top-0 overflow-hidden">
         {/* Image with animated clipPath */}
         <img
           ref={imageRef}
-          src="/ourservice.png"
+          src="/ourservice1.png"
           alt="Full Screen"
           className="w-full h-full object-cover"
         />
 
         {/* Our Service heading at top center */}
-     <h1 className="absolute font-mulish top-4 left-1/2 transform -translate-x-1/2 text-white font-bold z-20
+     <h1 className="absolute pt-10 font-mulish top-4 left-1/2 transform -translate-x-1/2 text-[#95c73b] font-bold z-20
                text-2xl   /* base: small devices */
                sm:text-3xl  /* small devices */
                md:text-4xl  /* medium devices */

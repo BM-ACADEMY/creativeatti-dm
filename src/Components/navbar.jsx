@@ -120,7 +120,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-black text-white w-full shadow-md px-4 py-3 z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-black text-[#97c93c] w-full shadow-md px-4 py-3 z-50">
       <div className="flex items-center justify-between w-full">
         {/* Logo */}
         <div className="text-2xl font-bold z-50">
@@ -142,7 +142,7 @@ const Navbar = () => {
               >
                 {link.name}
               </a>
-              <span className="absolute left-0 bottom-0 h-[2px] bg-[#97c93c] w-0"></span>
+              <span className="absolute left-0 bottom-0 h-[2px] bg-white w-0"></span>
             </li>
           ))}
         </ul>

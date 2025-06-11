@@ -70,9 +70,9 @@ const ParallaxGallery = () => {
   return (
     <div ref={sectionRef} className="overflow-x-hidden">
       {/* Heading */}
-      <div className="text-center py-12 bg-black">
+      <div className="text-center py-12">
         <motion.h2
-          className="text-4xl py-5 font-bold text-white"
+          className="text-4xl py-5 font-bold text-[#97c93c]"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -83,7 +83,7 @@ const ParallaxGallery = () => {
         </motion.h2>
 
         <motion.p
-          className="text-gray-400 mt-2"
+          className="text-gray-600 mt-2"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -96,13 +96,13 @@ const ParallaxGallery = () => {
       {tripletImages.map((set, idx) => (
   <section
     key={idx}
-    className="py-8 md:py-10 bg-black flex items-center justify-center px-4"
+    className="py-8 md:py-10 bg-white flex items-center justify-center px-4"
   >
     <div className="flex flex-col md:flex-row gap-4 md:gap-6">
       {/* Left Image */}
       <div
         ref={(el) => (leftRefs.current[idx] = el)}
-        className="w-full md:w-[400px] rounded-xl shadow-2xl overflow-hidden"
+        className="w-full md:w-[400px] rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.2)] overflow-hidden"
       >
         <img
           src={set.left}
@@ -114,7 +114,7 @@ const ParallaxGallery = () => {
       {/* Center Image */}
       <div
         ref={(el) => (centerRefs.current[idx] = el)}
-        className="w-full md:w-[400px] rounded-xl shadow-2xl overflow-hidden"
+        className="w-full md:w-[400px] rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.2)] overflow-hidden"
       >
         <img
           src={set.center}
@@ -126,7 +126,7 @@ const ParallaxGallery = () => {
       {/* Right Image */}
       <div
         ref={(el) => (rightRefs.current[idx] = el)}
-        className="w-full md:w-[400px] rounded-xl shadow-2xl overflow-hidden"
+        className="w-full md:w-[400px] rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.2)] overflow-hidden"
       >
         <img
           src={set.right}

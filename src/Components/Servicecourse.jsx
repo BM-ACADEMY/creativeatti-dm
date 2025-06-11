@@ -6,11 +6,12 @@ import Lenis from "@studio-freight/lenis";
 gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
-  "SOCIAL MEDIA MANAGEMENT",
-  "DIGITAL MEDIA MARKETING",
-  "BRANDING & PACKAGING",
-  "WEB DESIGN & SEO",
-  "CONTENT PRODUCTION",
+  "Creative content production",
+  "Commercial Photos & Films",
+  "Social media management ",
+  "Digital Media Ads",
+  "Web Design & SEO",
+  "Branding",
 ];
 
 export default function SkillsSection() {
@@ -34,13 +35,13 @@ export default function SkillsSection() {
         el,
         {
           scale: 1,
-          color: "#1a1a1a",
+          color: "#ebebeb",
           transformOrigin: "center center",
           opacity: 0.85,
         },
         {
           scale: 1.5,
-          color: "#ffffff",
+          color: "black",
           opacity: 1,
           ease: "power3.out",
           scrollTrigger: {
@@ -63,27 +64,28 @@ export default function SkillsSection() {
   return (
     <section
       ref={sectionRef}
-      className="bg-black py-16 flex flex-col items-center"
+      className=" py-16 flex flex-col items-center"
       style={{ minHeight: "100vh" }} id="services" // Reduced height to 100vh (viewport height)
     >
-      <h3 className="text-white text-sm text-center uppercase mb-10 px-4 max-w-xl">
+      <h3 className="text-[#97c93c] font-bold text-lg text-center uppercase mb-10 px-4 max-w-xl">
         Our Skills Cover
       </h3>
       <div className="flex flex-col items-center gap-16 w-full max-w-4xl px-6 sm:px-4">
         {skills.map((skill, index) => (
-          <h2
-            key={index}
-            ref={(el) => (itemsRef.current[index] = el)}
-            className="
-              font-sixcaps font-medium will-change-transform 
-              text-3xl sm:text-4xl md:text-6xl lg:text-8xl
-              tracking-wide sm:tracking-wider md:tracking-widest
-              text-center
-            "
-            style={{ color: "#1a1a1a", lineHeight: 1.1,letterSpacing:'2px'  }}
-          >
-            {skill}
-          </h2>
+         <h2
+  key={index}
+  ref={(el) => (itemsRef.current[index] = el)}
+  className="
+    font-sixcaps font-medium will-change-transform 
+    text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl
+    tracking-wide sm:tracking-wider md:tracking-widest
+    text-center
+  "
+  style={{ color: "#1a1a1a", lineHeight: 1.1, letterSpacing: '1px' }}
+>
+  {skill}
+</h2>
+
         ))}
       </div>
     </section>

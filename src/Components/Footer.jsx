@@ -62,7 +62,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white pb-10 relative" id='contact'>
+    <footer className="bg-white text-black pb-10 relative" id='contact'>
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between text-center gap-6 py-6 px-4">
         {/* Email */}
         <div className="flex-1 flex flex-col items-center gap-2">
@@ -86,7 +86,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-4 py-5 text-center relative text-white">
+      <div className="mt-4 py-5 text-center relative text-black">
         {/* Social Media Icons */}
         <div className="flex justify-center max-w-4xl mx-auto px-4 mb-5">
           <div className="flex gap-4">
@@ -97,7 +97,7 @@ const Footer = () => {
               className="group"
             >
               <Instagram
-                className="w-6 h-6 text-white group-hover:text-[#97c93c] transition-colors duration-300"
+                className="w-6 h-6 text-black group-hover:text-[#97c93c] transition-colors duration-300"
               />
             </a>
             <a
@@ -107,7 +107,7 @@ const Footer = () => {
               className="group"
             >
               <Facebook 
-                className="w-6 h-6 text-white group-hover:text-[#97c93c] transition-colors duration-300"
+                className="w-6 h-6 text-black group-hover:text-[#97c93c] transition-colors duration-300"
               />
             </a>
           </div>
@@ -140,7 +140,7 @@ const Footer = () => {
       {/* Back to Top Button */}
       <motion.button
         onClick={scrollToTop}
-        className="fixed bottom-8 left-8 bg-white text-black rounded-full p-3 shadow-lg hover:bg-[#97c93c] transition-colors duration-300 z-50"
+        className="fixed bottom-8 left-8 bg-black text-white rounded-full p-3 shadow-lg hover:bg-[#97c93c] transition-colors duration-300 z-50"
         variants={buttonVariants}
         initial="hidden"
         animate={showBackToTop ? "visible" : "hidden"}
